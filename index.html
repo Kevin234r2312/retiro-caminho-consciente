@@ -1,7 +1,1017 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="refresh" content="0;url=retiro-caminho-consciente.html">
-</head>
-</html>
 
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Retiro Caminho Consciente · Paraíso dos Pândavas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --cream:      #F5EFE4;
+  --ivory:      #FAF6EE;
+  --green-deep: #253830;
+  --green-mid:  #3A5445;
+  --green-sage: #6E9078;
+  --terra:      #A84E26;
+  --terra-lt:   #C07050;
+  --gold:       #BF9F5C;
+  --gold-lt:    #D4B878;
+  --text:       #2A2520;
+  --text-soft:  #6A5D52;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--ivory);
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.78;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── HERO ── */
+.hero {
+position: relative;
+min-height: 100vh;
+display: flex; flex-direction: column;
+align-items: center; justify-content: center;
+text-align: center; overflow: hidden;
+}
+.hero-bg {
+position: absolute; inset: 0;
+background-image: url(‘fotos/natureza.jpg’);
+background-size: cover;
+background-position: center 40%;
+animation: slowZoom 24s ease-in-out infinite alternate;
+}
+.hero-bg::after {
+content: ‘’;
+position: absolute; inset: 0;
+background: linear-gradient(160deg, rgba(15,28,20,0.72) 0%, rgba(10,20,14,0.38) 55%, rgba(0,0,0,0.78) 100%);
+}
+@keyframes slowZoom {
+from { transform: scale(1.0); }
+to   { transform: scale(1.08); }
+}
+.hero-content {
+position: relative; z-index: 2;
+padding: 60px 24px 88px;
+max-width: 860px;
+}
+.badge {
+display: inline-flex; align-items: center; gap: 10px;
+border: 1px solid rgba(212,184,120,0.5);
+color: var(–gold-lt);
+font-family: ‘DM Sans’, sans-serif;
+font-weight: 300; font-size: 11px;
+letter-spacing: 3.5px; text-transform: uppercase;
+padding: 9px 26px; border-radius: 40px;
+margin-bottom: 36px;
+animation: fadeUp 1s ease both;
+}
+.hero-title {
+font-family: ‘Playfair Display’, serif;
+font-weight: 400;
+font-size: clamp(50px, 9vw, 100px);
+line-height: 1.0;
+color: #fff; margin-bottom: 18px;
+animation: fadeUp 1s ease 0.15s both;
+letter-spacing: -0.5px;
+}
+.hero-title em { font-style: italic; color: var(–gold-lt); display: block; }
+.hero-sub {
+font-family: ‘DM Sans’, sans-serif;
+font-weight: 300;
+font-size: clamp(16px, 2.3vw, 20px);
+color: rgba(255,255,255,0.78);
+margin-bottom: 44px; line-height: 1.65;
+animation: fadeUp 1s ease 0.3s both;
+}
+.hero-pill {
+display: inline-flex; align-items: center; gap: 10px;
+background: rgba(255,255,255,0.08);
+backdrop-filter: blur(14px);
+border: 1px solid rgba(255,255,255,0.18);
+color: rgba(255,255,255,0.9); padding: 13px 28px;
+border-radius: 50px; font-size: 14px; font-weight: 300;
+letter-spacing: 0.5px; margin-bottom: 52px;
+animation: fadeUp 1s ease 0.45s both;
+}
+.hero-pill strong { color: var(–gold-lt); font-weight: 400; }
+.btn-cta {
+display: inline-block;
+background: var(–terra);
+color: #fff;
+font-family: ‘DM Sans’, sans-serif;
+font-weight: 500; font-size: 13px;
+letter-spacing: 2.5px; text-transform: uppercase;
+text-decoration: none;
+padding: 19px 52px; border-radius: 50px;
+transition: all 0.32s ease;
+animation: fadeUp 1s ease 0.6s both;
+box-shadow: 0 10px 36px rgba(168,78,38,0.42);
+}
+.btn-cta:hover {
+background: var(–terra-lt);
+transform: translateY(-3px);
+box-shadow: 0 16px 48px rgba(168,78,38,0.52);
+}
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(32px); }
+to   { opacity: 1; transform: translateY(0); }
+}
+.scroll-hint {
+position: absolute; bottom: 38px; left: 50%;
+transform: translateX(-50%);
+display: flex; flex-direction: column;
+align-items: center; gap: 10px;
+color: rgba(255,255,255,0.35);
+font-size: 9px; letter-spacing: 4px; text-transform: uppercase;
+}
+.scroll-hint::after {
+content: ‘’;
+width: 1px; height: 52px;
+background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+animation: breathe 2.4s ease-in-out infinite;
+}
+@keyframes breathe {
+0%,100% { opacity: 0.25; } 50% { opacity: 1; }
+}
+
+/* ── LAYOUT BASE ── */
+section { padding: 100px 24px; }
+.container { max-width: 980px; margin: 0 auto; }
+.label {
+font-size: 10px; letter-spacing: 4.5px;
+text-transform: uppercase; color: var(–terra);
+font-weight: 400; margin-bottom: 14px; display: block;
+}
+.h2 {
+font-family: ‘Playfair Display’, serif;
+font-weight: 400;
+font-size: clamp(36px, 5.5vw, 60px);
+line-height: 1.1; color: var(–green-deep); margin-bottom: 30px;
+}
+.h2 em { font-style: italic; color: var(–terra); }
+.body-text {
+color: var(–text-soft); font-size: 17px;
+line-height: 1.9; font-weight: 300;
+}
+.rule { width: 52px; height: 1.5px; background: var(–gold); border-radius: 2px; margin-bottom: 52px; }
+.rule.center { margin: 0 auto 56px; }
+.rule.left { margin: 0 0 52px; }
+
+/* ── INTRO ── */
+.intro { background: var(–cream); }
+.intro-grid {
+display: grid;
+grid-template-columns: 400px 1fr;
+gap: 88px; align-items: center;
+}
+.photo-frame { position: relative; }
+.photo-frame::before {
+content: ‘’;
+position: absolute; top: -14px; right: -14px;
+width: 52%; height: 52%;
+border-top: 1.5px solid var(–gold);
+border-right: 1.5px solid var(–gold);
+pointer-events: none;
+}
+.photo-frame::after {
+content: ‘’;
+position: absolute; bottom: -14px; left: -14px;
+width: 52%; height: 52%;
+border-bottom: 1.5px solid var(–gold);
+border-left: 1.5px solid var(–gold);
+pointer-events: none;
+}
+.photo-frame img {
+width: 100%; display: block;
+aspect-ratio: 3/4; object-fit: cover;
+object-position: top; border-radius: 3px;
+position: relative; z-index: 1;
+box-shadow: 0 20px 56px rgba(0,0,0,0.14);
+}
+.intro-text blockquote {
+font-family: ‘Playfair Display’, serif;
+font-size: 21px; font-style: italic;
+font-weight: 400; color: var(–green-deep);
+border-left: 2px solid var(–gold);
+padding: 2px 0 2px 22px;
+margin: 32px 0; line-height: 1.65;
+}
+
+/* ── FOR WHOM — animated icons ── */
+.for-whom { background: var(–green-deep); }
+.for-whom .label { color: var(–gold-lt); }
+.for-whom .h2 { color: #fff; }
+.for-whom .h2 em { color: var(–gold-lt); }
+.for-whom .rule { background: rgba(191,159,92,0.35); }
+.cards-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 14px;
+}
+.card {
+background: rgba(255,255,255,0.05);
+border: 1px solid rgba(255,255,255,0.08);
+border-radius: 10px; padding: 36px 26px 32px;
+display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;
+transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+.card:hover {
+background: rgba(255,255,255,0.09);
+border-color: rgba(191,159,92,0.3);
+transform: translateY(-3px);
+}
+.icon-box { width: 52px; height: 52px; color: var(–gold-lt); flex-shrink: 0; }
+.card-num { font-family: ‘Playfair Display’, serif; font-size: 12px; color: rgba(191,159,92,0.42); letter-spacing: 1.5px; }
+.card p { color: rgba(255,255,255,0.7); font-size: 15px; line-height: 1.72; font-weight: 300; }
+
+/* animated icon keyframes */
+.pulse-ring { transform-origin: 24px 19px; fill: none; stroke: currentColor; animation: pulseOut 2.6s ease-out infinite; }
+.pulse-ring.r2 { animation-delay: 0.85s; }
+.pulse-ring.r3 { animation-delay: 1.7s; }
+@keyframes pulseOut {
+0%   { transform: scale(0.25); opacity: 0.95; stroke-width: 2.5; }
+80%  { opacity: 0.15; }
+100% { transform: scale(1.9);  opacity: 0;    stroke-width: 0.4; }
+}
+.card:hover .pulse-ring { animation-duration: 1.2s; }
+
+.flame-outer { transform-origin: 24px 38px; animation: flicker 0.9s ease-in-out infinite alternate; }
+.flame-inner { transform-origin: 24px 36px; animation: flickerInner 0.75s ease-in-out infinite alternate; opacity: 0.55; }
+@keyframes flicker {
+0%   { transform: scaleX(1)    scaleY(1)    skewX(0deg);   }
+30%  { transform: scaleX(0.93) scaleY(1.07) skewX(-3deg);  }
+65%  { transform: scaleX(1.05) scaleY(0.95) skewX(2.5deg); }
+100% { transform: scaleX(0.97) scaleY(1.04) skewX(-1.5deg);}
+}
+@keyframes flickerInner {
+0%   { transform: scaleX(1)    scaleY(1)    skewX(0deg);  }
+40%  { transform: scaleX(1.08) scaleY(0.93) skewX(4deg);  }
+100% { transform: scaleX(0.9)  scaleY(1.08) skewX(-3deg); }
+}
+.card:hover .flame-outer { animation-duration: 0.4s; }
+.card:hover .flame-inner { animation-duration: 0.3s; }
+
+.tired-head-g { transform-origin: 24px 20px; animation: headDroop 4s ease-in-out infinite; }
+.tired-shl { transform-origin: 18px 23px; animation: shoulderL 4s ease-in-out infinite; }
+.tired-shr { transform-origin: 30px 23px; animation: shoulderR 4s ease-in-out infinite; }
+@keyframes headDroop {
+0%,20%  { transform: rotate(0deg) translate(0,0); }
+45%,75% { transform: rotate(22deg) translate(2px,1px); }
+100%    { transform: rotate(0deg) translate(0,0); }
+}
+@keyframes shoulderL {
+0%,20%  { transform: rotate(0deg); }
+45%,75% { transform: rotate(8deg); }
+100%    { transform: rotate(0deg); }
+}
+@keyframes shoulderR {
+0%,20%  { transform: rotate(0deg); }
+45%,75% { transform: rotate(-8deg); }
+100%    { transform: rotate(0deg); }
+}
+.card:hover .tired-head-g { animation-duration: 1.8s; }
+.card:hover .tired-shl { animation-duration: 1.8s; }
+.card:hover .tired-shr { animation-duration: 1.8s; }
+
+.float-figure { animation: levitate 3.8s ease-in-out infinite; }
+@keyframes levitate {
+0%,100% { transform: translateY(0px); }
+50%     { transform: translateY(-6px); }
+}
+.aura-ellipse { transform-origin: 24px 39px; animation: auraBreath 3.8s ease-in-out infinite; fill: none; stroke: currentColor; }
+@keyframes auraBreath {
+0%,100% { transform: scaleX(1);   opacity: 0.35; }
+50%     { transform: scaleX(0.6); opacity: 0.1; }
+}
+.spark { animation: sparkle 3.8s ease-in-out infinite; fill: currentColor; }
+.spark.s2 { animation-delay: 0.65s; }
+.spark.s3 { animation-delay: 1.3s; }
+.spark.s4 { animation-delay: 1.95s; }
+@keyframes sparkle {
+0%,100% { opacity: 0; transform: scale(0.3); }
+30%     { opacity: 0.8; transform: scale(1); }
+70%     { opacity: 0.8; transform: scale(1); }
+90%     { opacity: 0;   transform: scale(0.3); }
+}
+.card:hover .float-figure { animation-duration: 2s; }
+
+/* ── VIVENCIAS ── */
+.vivencias { background: var(–ivory); }
+.viv-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1px; background: rgba(0,0,0,0.07);
+border: 1px solid rgba(0,0,0,0.07);
+border-radius: 8px; overflow: hidden;
+}
+.viv {
+background: var(–ivory); padding: 44px 32px;
+transition: background 0.28s ease;
+}
+.viv:hover { background: var(–cream); }
+.viv-num {
+font-family: ‘Playfair Display’, serif;
+font-size: 56px; font-weight: 400;
+color: var(–gold); line-height: 1; opacity: 0.45; margin-bottom: 12px;
+}
+.viv h3 {
+font-family: ‘Playfair Display’, serif;
+font-size: 21px; font-weight: 400;
+color: var(–green-deep); margin-bottom: 10px;
+}
+.viv p { color: var(–text-soft); font-size: 15px; font-weight: 300; line-height: 1.72; }
+.viv-ico { width: 34px; height: 34px; color: var(–green-sage); margin-bottom: 16px; }
+
+/* ── GALERIA DA POUSADA ── */
+.galeria { background: var(–green-deep); padding: 100px 24px; }
+.galeria .label { color: var(–gold-lt); }
+.galeria .h2 { color: #fff; }
+.galeria .h2 em { color: var(–gold-lt); }
+.galeria .rule { background: rgba(191,159,92,0.35); }
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: 280px 280px;
+gap: 8px;
+margin-top: 8px;
+}
+.g-item {
+overflow: hidden; border-radius: 4px;
+position: relative;
+}
+.g-item img {
+width: 100%; height: 100%;
+object-fit: cover;
+transition: transform 0.6s ease;
+display: block;
+}
+.g-item:hover img { transform: scale(1.06); }
+.g-item .caption {
+position: absolute; bottom: 0; left: 0; right: 0;
+padding: 12px 16px;
+background: linear-gradient(transparent, rgba(0,0,0,0.6));
+color: rgba(255,255,255,0.85);
+font-size: 11px; letter-spacing: 2px;
+text-transform: uppercase; font-weight: 300;
+opacity: 0; transition: opacity 0.3s ease;
+}
+.g-item:hover .caption { opacity: 1; }
+/* Layout assimétrico editorial */
+.g-a { grid-column: 1 / 6;  grid-row: 1; }
+.g-b { grid-column: 6 / 9;  grid-row: 1; }
+.g-c { grid-column: 9 / 13; grid-row: 1; }
+.g-d { grid-column: 1 / 5;  grid-row: 2; }
+.g-e { grid-column: 5 / 9;  grid-row: 2; }
+.g-f { grid-column: 9 / 13; grid-row: 2; }
+
+/* ── PHOTO BAND ── */
+.photo-band { height: 460px; position: relative; overflow: hidden; }
+.photo-band img {
+width: 100%; height: 100%;
+object-fit: cover; object-position: center 55%;
+display: block; filter: brightness(0.65);
+}
+.band-text {
+position: absolute; inset: 0;
+display: flex; align-items: center; justify-content: center;
+flex-direction: column; gap: 16px;
+background: linear-gradient(to right, rgba(0,0,0,0.25) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.25) 100%);
+}
+.band-text .label { color: var(–gold-lt); text-align: center; }
+.band-text p {
+font-family: ‘Playfair Display’, serif;
+font-size: clamp(24px, 3.8vw, 46px);
+font-style: italic; font-weight: 400;
+color: #fff; text-align: center;
+max-width: 740px; padding: 0 24px;
+text-shadow: 0 3px 28px rgba(0,0,0,0.38);
+line-height: 1.38;
+}
+
+/* ── INCLUÍDO ── */
+.incluido { background: var(–cream); }
+.includes-grid {
+display: grid; grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+}
+.inc {
+display: flex; flex-direction: column;
+align-items: center; text-align: center;
+gap: 16px; padding: 40px 20px;
+border-radius: 8px; background: var(–ivory);
+border: 1px solid rgba(0,0,0,0.055);
+transition: all 0.3s ease;
+}
+.inc:hover {
+border-color: var(–gold);
+transform: translateY(-4px);
+box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+.inc-ico { width: 40px; height: 40px; color: var(–green-mid); }
+.inc strong {
+display: block; font-family: ‘Playfair Display’, serif;
+font-size: 18px; font-weight: 400; color: var(–green-deep); margin-bottom: 4px;
+}
+.inc p { font-size: 14px; color: var(–text-soft); font-weight: 300; line-height: 1.6; }
+
+/* ── LOGÍSTICA ── */
+.logistica { background: var(–green-deep); }
+.logistica .label { color: var(–gold-lt); }
+.logistica .h2 { color: #fff; }
+.logistica .h2 em { color: var(–gold-lt); }
+.logistica .rule { background: rgba(191,159,92,0.35); }
+.timeline { position: relative; padding-left: 44px; }
+.timeline::before {
+content: ‘’;
+position: absolute; left: 8px; top: 10px; bottom: 10px;
+width: 1px;
+background: linear-gradient(to bottom, var(–gold), rgba(191,159,92,0.1));
+}
+.t-item { position: relative; padding-bottom: 48px; }
+.t-item:last-child { padding-bottom: 0; }
+.t-item::before {
+content: ‘’;
+position: absolute; left: -39px; top: 8px;
+width: 12px; height: 12px; border-radius: 50%;
+background: var(–gold);
+box-shadow: 0 0 0 4px rgba(191,159,92,0.18);
+}
+.t-day { font-size: 10px; letter-spacing: 3.5px; text-transform: uppercase; color: var(–gold-lt); margin-bottom: 8px; font-weight: 300; }
+.t-item h4 { font-family: ‘Playfair Display’, serif; font-size: 28px; color: #fff; font-weight: 400; margin-bottom: 10px; }
+.t-item p { color: rgba(255,255,255,0.58); font-size: 15px; font-weight: 300; line-height: 1.78; }
+
+/* ── INSTRUTORAS ── */
+.instrutoras { background: var(–ivory); }
+.inst-grid {
+display: grid; grid-template-columns: 1fr 1fr;
+gap: 72px; align-items: start;
+}
+.inst-card { display: flex; flex-direction: column; gap: 16px; }
+.inst-avatar {
+width: 108px; height: 108px; border-radius: 50%;
+object-fit: cover; object-position: top;
+border: 2px solid var(–gold-lt);
+box-shadow: 0 6px 28px rgba(0,0,0,0.13);
+}
+.inst-placeholder {
+width: 108px; height: 108px; border-radius: 50%;
+background: linear-gradient(135deg, var(–green-sage), var(–gold));
+border: 2px solid var(–gold-lt);
+display: flex; align-items: center; justify-content: center;
+}
+.inst-role { font-size: 10px; letter-spacing: 3.5px; text-transform: uppercase; color: var(–terra); font-weight: 400; }
+.inst-card h3 { font-family: ‘Playfair Display’, serif; font-size: 28px; font-weight: 400; color: var(–green-deep); }
+.inst-card p { color: var(–text-soft); font-size: 16px; font-weight: 300; line-height: 1.82; }
+.inst-card a { color: var(–green-sage); text-decoration: none; font-size: 13px; letter-spacing: 1px; transition: color 0.2s; }
+.inst-card a:hover { color: var(–terra); }
+
+/* ── INVESTIMENTO ── */
+.investimento { background: var(–cream); }
+.price-box {
+background: var(–ivory);
+border: 1px solid rgba(0,0,0,0.07);
+border-radius: 12px; padding: 68px 60px;
+max-width: 580px; margin: 4px auto 0;
+text-align: center;
+box-shadow: 0 28px 72px rgba(0,0,0,0.07);
+position: relative; overflow: hidden;
+}
+.price-box::before {
+content: ‘’;
+position: absolute; top: 0; left: 0; right: 0; height: 2.5px;
+background: linear-gradient(90deg, var(–terra), var(–gold), var(–green-sage));
+}
+.price-pre { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(–text-soft); margin-bottom: 22px; }
+.price-main { font-family: ‘Playfair Display’, serif; font-size: 80px; font-weight: 400; color: var(–green-deep); line-height: 1; margin-bottom: 12px; }
+.price-main sup { font-size: 30px; font-weight: 400; vertical-align: super; }
+.price-parcel { color: var(–text-soft); font-size: 16px; font-weight: 300; margin-bottom: 8px; }
+.price-parcel strong { color: var(–green-mid); font-weight: 500; }
+.price-includes { font-size: 13px; color: var(–green-sage); margin-bottom: 44px; line-height: 1.6; }
+.price-box .btn-cta { width: 100%; text-align: center; font-size: 13px; padding: 21px 40px; }
+.guarantee { margin-top: 24px; font-size: 13px; color: var(–text-soft); font-weight: 300; display: flex; align-items: center; justify-content: center; gap: 7px; }
+.urgency {
+max-width: 580px; margin: 30px auto 0;
+padding: 19px 28px;
+background: rgba(168,78,38,0.07);
+border: 1px solid rgba(168,78,38,0.15);
+border-radius: 8px; text-align: center;
+color: var(–terra); font-size: 14px;
+}
+.urgency strong { font-weight: 600; }
+
+/* ── FOOTER ── */
+footer {
+background: var(–green-deep);
+color: rgba(255,255,255,0.45);
+text-align: center; padding: 52px 24px;
+font-size: 14px; font-weight: 300;
+}
+footer a { color: var(–gold-lt); text-decoration: none; }
+footer a:hover { color: #fff; }
+.footer-rule { width: 40px; height: 1px; background: rgba(191,159,92,0.3); margin: 20px auto; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+.intro-grid { grid-template-columns: 1fr; gap: 52px; }
+.photo-frame { max-width: 360px; margin: 0 auto; }
+.inst-grid { grid-template-columns: 1fr; gap: 56px; }
+.cards-grid { grid-template-columns: 1fr 1fr; }
+.includes-grid { grid-template-columns: 1fr 1fr; }
+.viv-grid { grid-template-columns: 1fr; }
+/* galeria 2 colunas, 6 fotos em 4 linhas (1+2+2+1) */
+.gallery-grid {
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 220px 200px 200px 240px;
+}
+.g-a { grid-column: 1/3; grid-row: 1; }
+.g-b { grid-column: 1/2; grid-row: 2; }
+.g-c { grid-column: 2/3; grid-row: 2; }
+.g-d { grid-column: 1/2; grid-row: 3; }
+.g-e { grid-column: 2/3; grid-row: 3; }
+.g-f { grid-column: 1/3; grid-row: 4; display: block; }
+}
+@media (max-width: 600px) {
+.cards-grid { grid-template-columns: 1fr; }
+.includes-grid { grid-template-columns: 1fr; }
+.price-box { padding: 48px 24px; }
+.price-main { font-size: 60px; }
+.price-main sup { font-size: 22px; }
+section { padding: 72px 20px; }
+
+/* HERO mobile */
+.hero-content { padding: 50px 20px 70px; }
+.badge {
+font-size: 9.5px;
+letter-spacing: 2.5px;
+padding: 8px 18px;
+line-height: 1.5;
+max-width: 92%;
+}
+.hero-pill {
+font-size: 13px;
+padding: 11px 22px;
+gap: 8px;
+letter-spacing: 0.3px;
+}
+.hero-sub { font-size: 15px; padding: 0 6px; }
+
+/* BOTÕES CTA mobile - sem letter-spacing absurdo */
+.btn-cta {
+padding: 16px 22px;
+font-size: 12px;
+letter-spacing: 1.2px;
+white-space: nowrap;
+}
+.price-box .btn-cta {
+padding: 17px 18px;
+font-size: 11.5px;
+letter-spacing: 1px;
+}
+
+/* GALERIA mobile - alturas menores */
+.gallery-grid { grid-template-rows: 200px 180px 180px 220px; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- ════ HERO ════ -->
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="badge">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 4 6 4 10c0 7 8 12 8 12s8-5 8-12c0-4-4-8-8-8z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      Paraíso dos Pândavas · Chapada dos Veadeiros · 3 a 5 de Julho
+    </div>
+    <h1 class="hero-title">Retiro<br/><em>Caminho Consciente</em></h1>
+    <p class="hero-sub">Uma imersão para reduzir o estresse, restaurar sua saúde<br/>e cultivar longevidade</p>
+    <div class="hero-pill">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Paraíso dos Pândavas · <strong>3 dias</strong></span>
+    </div>
+    <a href="#investimento" class="btn-cta">Quero garantir minha vaga</a>
+  </div>
+  <div class="scroll-hint">role</div>
+</section>
+
+<!-- ════ INTRO ════ -->
+
+<section class="intro">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="photo-frame">
+        <img src="fotos/robe.jpg" alt="Pousada Paraíso dos Pândavas"/>
+      </div>
+      <div class="intro-text">
+        <span class="label">O Retiro</span>
+        <h2 class="h2">Você merece<br/><em>este espaço</em></h2>
+        <div class="rule left"></div>
+        <p class="body-text">Vivemos aceleradas, em um estado permanente de alerta, resolvendo tudo para todos — e muitas vezes nos esquecemos de nós mesmos. Prazos, notificações, conflitos, cobranças — o corpo interpreta tudo isso como ameaça e libera cortisol, o hormônio do estresse.</p>
+        <p class="body-text" style="margin-top:20px">O problema é que, quando esse estado se torna crônico, o cortisol deixa de ser aliado e passa a danificar estruturas cerebrais ligadas à memória, ao raciocínio e ao envelhecimento saudável. A ciência já comprovou: estresse crônico não é só uma sensação ruim — ele encolhe o cérebro, compromete a memória e aumenta o risco de doenças cardíacas.</p>
+        <blockquote>"A boa notícia é que também existe evidência científica para a saída."</blockquote>
+        <p class="body-text">Práticas de respiração consciente, imersão na natureza e atenção ao corpo reduzem os níveis de cortisol, regulam o sistema nervoso e promovem neuroplasticidade — a capacidade do cérebro de se regenerar. O Retiro Caminho Consciente foi criado para ser esse espaço: desacelerar com intenção, cuidar da saúde de verdade e retomar o contato com o que sustenta uma vida mais longa e mais plena.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ PARA QUEM ════ -->
+
+<section class="for-whom">
+  <div class="container" style="text-align:center">
+    <span class="label">Para quem é</span>
+    <h2 class="h2">Este retiro é <em>para você</em> se…</h2>
+    <div class="rule center"></div>
+    <p style="color:rgba(255,255,255,0.65); font-size:17px; font-weight:300; max-width:680px; margin:0 auto 52px; line-height:1.8;">Uma imersão de 3 dias criada para <strong style="color:var(--gold-lt); font-weight:400">homens e mulheres</strong> que sentem que estão vivendo no automático, sobrecarregados mentalmente, e desejam cuidar do corpo e da mente para viver com mais qualidade, saúde e longevidade.</p>
+    <div class="cards-grid">
+
+```
+  <!-- 01 mente acelerada -->
+  <div class="card">
+    <div class="icon-box">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%">
+        <circle class="pulse-ring r1" cx="24" cy="19" r="9" stroke-width="1.6"/>
+        <circle class="pulse-ring r2" cx="24" cy="19" r="9" stroke-width="1.6"/>
+        <circle class="pulse-ring r3" cx="24" cy="19" r="9" stroke-width="1.6"/>
+        <path stroke-width="1.6" d="M17 19 C17 13.5 20.1 10 24 10 C27.9 10 31 13.5 31 19 C31 22.5 29.5 25 27 26.5 L27 30 L21 30 L21 26.5 C18.5 25 17 22.5 17 19 Z"/>
+        <line x1="21" y1="18" x2="27" y2="18" stroke-width="1.2"/>
+        <line x1="20" y1="21" x2="28" y2="21" stroke-width="1.2"/>
+      </svg>
+    </div>
+    <span class="card-num">01</span>
+    <p>Sente a mente acelerada e sobrecarregada, e não consegue desligar mesmo quando quer</p>
+  </div>
+
+  <!-- 02 relógio (JS) -->
+  <div class="card" id="clockCard">
+    <div class="icon-box">
+      <svg id="clockSvg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%">
+        <circle cx="24" cy="24" r="16" stroke-width="1.6"/>
+        <line x1="24" y1="10" x2="24" y2="13" stroke-width="1.8"/>
+        <line x1="38" y1="24" x2="35" y2="24" stroke-width="1.8"/>
+        <line x1="24" y1="38" x2="24" y2="35" stroke-width="1.8"/>
+        <line x1="10" y1="24" x2="13" y2="24" stroke-width="1.8"/>
+        <line id="hourHand"   x1="24" y1="24" x2="24" y2="17" stroke-width="2.2" stroke-linecap="round"/>
+        <line id="minuteHand" x1="24" y1="24" x2="24" y2="13" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="24" cy="24" r="1.8" fill="currentColor" stroke="none"/>
+      </svg>
+    </div>
+    <span class="card-num">02</span>
+    <p>Está vivendo no automático — os dias passam, mas a sensação é de vazio ou cansaço acumulado</p>
+  </div>
+
+  <!-- 03 chama / burnout -->
+  <div class="card">
+    <div class="icon-box">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%">
+        <path class="flame-outer" stroke-width="1.6" d="M24 40 C15 40 11 34 11 28 C11 23 14 19.5 16.5 17 C16 22 18.5 23.5 20 22.5 C18 18 19.5 12 24 8 C24 14.5 27 16.5 28 18.5 C29.5 14.5 29.5 11.5 27.5 8.5 C32 12 37 18.5 37 28 C37 34 33 40 24 40 Z"/>
+        <path class="flame-inner" stroke-width="1.3" d="M24 34 C20 34 18 30.5 18 27.5 C18 25 19.5 23 21 22 C20.5 24.5 22.5 25.5 23.5 24.5 C22.5 22.5 23 19.5 25 17.5 C25 20.5 27 22 28 23.5 C28.5 21.5 28.5 20 27.5 18.5 C30 20.5 32 24 32 27.5 C32 30.5 29 34 24 34 Z"/>
+      </svg>
+    </div>
+    <span class="card-num">03</span>
+    <p>Sente ansiedade, irritação ou sinais de burnout que já não consegue ignorar</p>
+  </div>
+
+  <!-- 04 pessoa cansada -->
+  <div class="card">
+    <div class="icon-box">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%">
+        <g class="tired-head-g">
+          <circle cx="24" cy="12" r="5.5" stroke-width="1.6"/>
+          <path d="M21 11.5 Q22 13 23 11.5" stroke-width="1.2"/>
+          <path d="M25 11.5 Q26 13 27 11.5" stroke-width="1.2"/>
+          <path d="M22 14.5 Q24 13.5 26 14.5" stroke-width="1.1"/>
+        </g>
+        <line x1="24" y1="17.5" x2="24" y2="21" stroke-width="1.5"/>
+        <g class="tired-shl">
+          <line x1="24" y1="23" x2="14" y2="27" stroke-width="1.6"/>
+          <line x1="14" y1="27" x2="12" y2="39" stroke-width="1.5"/>
+        </g>
+        <g class="tired-shr">
+          <line x1="24" y1="23" x2="34" y2="27" stroke-width="1.6"/>
+          <line x1="34" y1="27" x2="36" y2="39" stroke-width="1.5"/>
+        </g>
+        <path d="M24 21 Q23 29 22.5 35" stroke-width="1.5"/>
+        <line x1="22.5" y1="35" x2="19" y2="45" stroke-width="1.5"/>
+        <line x1="22.5" y1="35" x2="25" y2="45" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <span class="card-num">04</span>
+    <p>Cuida de todos e resolve tudo — mas por dentro está exausta e sem espaço para si mesma</p>
+  </div>
+
+  <!-- 05 meditação flutuante -->
+  <div class="card">
+    <div class="icon-box">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%">
+        <ellipse class="aura-ellipse" cx="24" cy="39" rx="10" ry="2.5" stroke-width="1.2"/>
+        <circle class="spark s1" cx="12" cy="22" r="1.2" stroke="none"/>
+        <circle class="spark s2" cx="36" cy="18" r="1.0" stroke="none"/>
+        <circle class="spark s3" cx="10" cy="30" r="0.9" stroke="none"/>
+        <circle class="spark s4" cx="37" cy="30" r="1.1" stroke="none"/>
+        <g class="float-figure">
+          <circle cx="24" cy="11" r="4.5" stroke-width="1.6"/>
+          <path d="M21.5 10.5 Q22.5 11.5 23.5 10.5" stroke-width="1.1"/>
+          <path d="M24.5 10.5 Q25.5 11.5 26.5 10.5" stroke-width="1.1"/>
+          <path d="M22 13 Q24 14.5 26 13" stroke-width="1.1"/>
+          <line x1="24" y1="15.5" x2="24" y2="23" stroke-width="1.5"/>
+          <path d="M24 23 Q19 25 15 30 Q19 32.5 24 31" stroke-width="1.5"/>
+          <path d="M24 23 Q29 25 33 30 Q29 32.5 24 31" stroke-width="1.5"/>
+          <path d="M24 19 Q18 22 15 29" stroke-width="1.4"/>
+          <circle cx="15" cy="29.5" r="1.5" stroke-width="1.2"/>
+          <path d="M24 19 Q30 22 33 29" stroke-width="1.4"/>
+          <circle cx="33" cy="29.5" r="1.5" stroke-width="1.2"/>
+        </g>
+      </svg>
+    </div>
+    <span class="card-num">05</span>
+    <p>Deseja mais presença, leveza e equilíbrio emocional no seu dia a dia</p>
+  </div>
+
+  <!-- 06 reconexão / folha -->
+  <div class="card">
+    <div class="icon-box">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%">
+        <circle cx="24" cy="24" r="16" stroke-width="1.5" stroke-dasharray="3 2.5"/>
+        <path stroke-width="1.6" d="M24 36 C24 36 14 30 14 21 C14 14 19 10 24 10 C29 10 34 14 34 21 C34 30 24 36 24 36 Z"/>
+        <line x1="24" y1="36" x2="24" y2="12" stroke-width="1.2" opacity="0.55"/>
+        <path d="M24 19 Q20 22 17 21" stroke-width="1" opacity="0.45"/>
+        <path d="M24 23 Q20 26 17 25" stroke-width="1" opacity="0.45"/>
+        <path d="M24 19 Q28 22 31 21" stroke-width="1" opacity="0.45"/>
+        <path d="M24 23 Q28 26 31 25" stroke-width="1" opacity="0.45"/>
+      </svg>
+    </div>
+    <span class="card-num">06</span>
+    <p>Busca um espaço de pausa genuína e reconexão com o que realmente importa para você</p>
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ════ VIVENCIAS ════ -->
+
+<section class="vivencias">
+  <div class="container" style="text-align:center">
+    <span class="label">Experiências</span>
+    <h2 class="h2">O que você vai <em>vivenciar</em></h2>
+    <div class="rule center"></div>
+    <div class="viv-grid">
+      <div class="viv">
+        <svg class="viv-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        <div class="viv-num">01</div><h3>Meditações Guiadas</h3>
+        <p>Sessões de mindfulness conduzidas com técnica e cuidado para acalmar a mente e trazer você ao momento presente</p>
+      </div>
+      <div class="viv">
+        <svg class="viv-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 5 5 5 9c0 2 .7 3.8 2 5.1L12 22l5-7.9c1.3-1.3 2-3.1 2-5.1 0-4-3-7-7-7z"/></svg>
+        <div class="viv-num">02</div><h3>Yogaterapia</h3>
+        <p>Prática terapêutica que integra movimento, respiração e consciência corporal para regular emoções e fortalecer o equilíbrio</p>
+      </div>
+      <div class="viv">
+        <svg class="viv-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M3 12h1M20 12h1M12 3v1M12 20v1M6.3 6.3l.8.8M16.9 16.9l.8.8M6.3 17.7l.8-.8M16.9 7.1l.8-.8"/></svg>
+        <div class="viv-num">03</div><h3>Caminhada Meditativa</h3>
+        <p>Uma experiência sensorial em contato direto com a natureza exuberante da Chapada dos Veadeiros</p>
+      </div>
+      <div class="viv">
+        <svg class="viv-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2-4 5-6 10-6s8 2 10 6"/><path d="M2 12c2 4 5 6 10 6s8-2 10-6"/></svg>
+        <div class="viv-num">04</div><h3>Banho de Cachoeira</h3>
+        <p>Um mergulho restaurador nas águas cristalinas — símbolo de renovação e encontro com o essencial</p>
+      </div>
+      <div class="viv">
+        <svg class="viv-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="viv-num">05</div><h3>Roda de Conversa</h3>
+        <p>Espaço de escuta, partilha e conexão com outras pessoas em um ambiente seguro e acolhedor</p>
+      </div>
+      <div class="viv">
+        <svg class="viv-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <div class="viv-num">06</div><h3>Palestra: Saúde Mental e Longevidade</h3>
+        <p>Uma conversa fundamentada na ciência sobre como o estresse crônico afeta o corpo e o cérebro — e o que você pode fazer para reverter esse processo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ GALERIA DA POUSADA ════ -->
+
+<section class="galeria">
+  <div class="container">
+    <span class="label">O espaço</span>
+    <h2 class="h2">Cachoeira e Pousada<br/><em>Paraíso dos Pândavas</em></h2>
+    <div class="rule left"></div>
+    <div class="gallery-grid">
+      <div class="g-item g-a">
+        <img src="fotos/robe.jpg" alt="Aconchego do quarto"/>
+        <div class="caption">Quarto · Aconchego</div>
+      </div>
+      <div class="g-item g-b">
+        <img src="fotos/chapada.jpg" alt="Vista da natureza"/>
+        <div class="caption">Vista · Natureza</div>
+      </div>
+      <div class="g-item g-c">
+        <img src="fotos/paisagem.jpg" alt="Chapada dos Veadeiros"/>
+        <div class="caption">Chapada · Paisagem</div>
+      </div>
+      <div class="g-item g-d">
+        <img src="fotos/quarto.jpg" alt="Hospedagem"/>
+        <div class="caption">Hospedagem</div>
+      </div>
+      <div class="g-item g-e">
+        <img src="fotos/natureza.jpg" alt="Natureza da Chapada"/>
+        <div class="caption">Natureza · Chapada</div>
+      </div>
+      <div class="g-item g-f">
+        <img src="fotos/cafe.jpg" alt="Café da manhã na Pousada" style="object-position:center"/>
+        <div class="caption">Café da Manhã</div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ PHOTO BAND (cachoeira) ════ -->
+
+<div class="photo-band">
+  <img src="fotos/natureza.jpg" alt="Cachoeira · Paraíso dos Pândavas"/>
+  <div class="band-text">
+    <span class="label">Cachoeira e Pousada · Paraíso dos Pândavas</span>
+    <p>"Um lugar onde a natureza cuida de você antes mesmo das práticas começarem."</p>
+  </div>
+</div>
+
+<!-- ════ INCLUÍDO ════ -->
+
+<section class="incluido">
+  <div class="container" style="text-align:center">
+    <span class="label">Tudo cuidado para você</span>
+    <h2 class="h2">O que está <em>incluído</em></h2>
+    <div class="rule center"></div>
+    <div class="includes-grid">
+      <div class="inc">
+        <svg class="inc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6"/><path d="M6 12V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5"/><path d="M10 16h4"/></svg>
+        <div><strong>Hospedagem</strong><p>Quarto com ar condicionado no Paraíso dos Pândavas</p></div>
+      </div>
+      <div class="inc">
+        <svg class="inc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+        <div><strong>Alimentação</strong><p>Café, almoço e jantar vegetarianos inclusos</p></div>
+      </div>
+      <div class="inc">
+        <svg class="inc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="10" width="22" height="8" rx="2"/><path d="M5 10V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+        <div><strong>Translado</strong><p>Do aeroporto de Brasília à pousada e retorno</p></div>
+      </div>
+      <div class="inc">
+        <svg class="inc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        <div><strong>Todas as Práticas</strong><p>Meditações, yoga, caminhadas e vivências terapêuticas</p></div>
+      </div>
+      <div class="inc">
+        <svg class="inc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2-4 5-6 10-6s8 2 10 6c-2 4-5 6-10 6s-8-2-10-6z"/></svg>
+        <div><strong>Banho de Cachoeira</strong><p>Mergulho nas águas cristalinas da Chapada</p></div>
+      </div>
+      <div class="inc">
+        <svg class="inc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21l8.84-8.61a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <div><strong>Condução Completa</strong><p>Acompanhamento total das instrutoras durante o retiro</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ LOGÍSTICA ════ -->
+
+<section class="logistica">
+  <div class="container">
+    <span class="label">Programação</span>
+    <h2 class="h2">Os seus <em>3 dias</em></h2>
+    <div class="rule left"></div>
+    <div class="timeline">
+      <div class="t-item">
+        <p class="t-day">Dia 1 · 03 de Julho · Quinta-feira</p>
+        <h4>Chegada e Acolhimento</h4>
+        <p>Saída de Brasília às 12h30 · Chegada à pousada · Primeiro contato com o espaço e as práticas · Jantar em grupo e roda de abertura</p>
+      </div>
+      <div class="t-item">
+        <p class="t-day">Dia 2 · 04 de Julho · Sexta-feira</p>
+        <h4>Imersão Plena</h4>
+        <p>Dia inteiro dedicado a você: meditação ao amanhecer · yogaterapia · caminhada meditativa · banho de cachoeira · roda de conversa ao entardecer</p>
+      </div>
+      <div class="t-item">
+        <p class="t-day">Dia 3 · 05 de Julho · Sábado</p>
+        <h4>Integração e Retorno</h4>
+        <p>Prática de encerramento · almoço de despedida · saída às 14h · chegada em Brasília às 17h30–18h, com o coração cheio</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ INSTRUTORAS ════ -->
+
+<section class="instrutoras">
+  <div class="container" style="text-align:center">
+    <span class="label">Quem vai conduzir</span>
+    <h2 class="h2">As <em>instrutoras</em></h2>
+    <div class="rule center"></div>
+    <div class="inst-grid" style="text-align:left">
+      <div class="inst-card">
+        <img class="inst-avatar" src="fotos/karine.jpg" alt="Karine B. Ribas" style="object-position:center top"/>
+        <div>
+          <p class="inst-role">Instrutora de Mindfulness</p>
+          <h3>Karine B. Ribas</h3>
+        </div>
+        <p>Instrutora de meditação mindfulness com experiência em programas baseados em atenção plena. Conduz práticas que unem técnica e sensibilidade para transformar a relação com a mente e com o momento presente.</p>
+        <a href="https://instagram.com/karinemindfulness" target="_blank">&#8594; @karinemindfulness</a>
+      </div>
+      <div class="inst-card">
+        <img class="inst-avatar" src="fotos/thais.jpg" alt="Thaís de Cassia" style="object-position:center top"/>
+        <div>
+          <p class="inst-role">Yogaterapeuta</p>
+          <h3>Thaís de Cassia</h3>
+        </div>
+        <p>Yogaterapeuta especializada em práticas integrativas de cuidado do corpo e da mente. Com uma abordagem acolhedora e profunda, conduz vivências que ajudam a regular emoções e fortalecer a conexão consigo mesma.</p>
+        <a href="https://instagram.com/deixadivatelevar" target="_blank">&#8594; @deixadivatelevar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ INVESTIMENTO ════ -->
+
+<section class="investimento" id="investimento">
+  <div class="container" style="text-align:center">
+    <span class="label">Investimento</span>
+    <h2 class="h2">Seu cuidado<br/><em>começa agora</em></h2>
+    <div class="rule center"></div>
+    <div class="price-box">
+      <p class="price-pre">Seu investimento</p>
+      <div class="price-main"><sup>R$</sup> 933</div>
+      <p class="price-parcel" style="font-size:13px; margin-bottom:4px;">3 parcelas sem juros · total R$ 2.799</p>
+      <p class="price-includes">Inclui hospedagem · alimentação vegetariana<br/>translado · todas as práticas e condução</p>
+      <a href="https://www.asaas.com/c/tgpa9f51ew3ze7cl" target="_blank" class="btn-cta">Garantir minha vaga · 3x de R$ 933</a>
+      <p class="guarantee">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Pagamento seguro · Dúvidas? Entre em contato pelo Instagram
+      </p>
+    </div>
+    <div class="urgency">
+      <strong>Vagas muito limitadas.</strong> Este é um retiro íntimo — as vagas se encerram assim que completadas.
+    </div>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+
+<footer>
+  <p>Retiro Caminho Consciente · Cachoeira e Pousada Paraíso dos Pândavas · Chapada dos Veadeiros, GO</p>
+  <div class="footer-rule"></div>
+  <p>
+    <a href="https://instagram.com/karinemindfulness" target="_blank">@karinemindfulness</a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="https://instagram.com/deixadivatelevar" target="_blank">@deixadivatelevar</a>
+  </p>
+</footer>
+
+<script>
+/* ════ RELÓGIO ACELERADO ════ */
+const clockCard  = document.getElementById('clockCard');
+const hourHand   = document.getElementById('hourHand');
+const minuteHand = document.getElementById('minuteHand');
+
+let minuteAngle = -90;
+let hourAngle   = -60;
+let speed       = 1.2;
+let targetSpeed = 1.2;
+const normalSpeed = 1.2;
+const fastSpeed   = 28;
+
+clockCard.addEventListener('mouseenter', () => { targetSpeed = fastSpeed; });
+clockCard.addEventListener('mouseleave', () => { targetSpeed = normalSpeed; });
+
+function tickClock() {
+  speed += (targetSpeed - speed) * 0.04;
+  minuteAngle += speed;
+  hourAngle   += speed / 12;
+
+  const mRad  = (minuteAngle * Math.PI) / 180;
+  minuteHand.setAttribute('x2', 24 + Math.sin(mRad) * 11);
+  minuteHand.setAttribute('y2', 24 - Math.cos(mRad) * 11);
+
+  const hRad  = (hourAngle * Math.PI) / 180;
+  hourHand.setAttribute('x2', 24 + Math.sin(hRad) * 7);
+  hourHand.setAttribute('y2', 24 - Math.cos(hRad) * 7);
+
+  requestAnimationFrame(tickClock);
+}
+tickClock();
+</script>
+
+</body>
+</html>
